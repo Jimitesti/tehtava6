@@ -1,8 +1,12 @@
+
 # H6 Akkuna
 
 ## v) Lue ja tiivistä artikkeli muutamalla ranskalaisella viivalla. Tässä z-alakohdassa ei tarvitse siis tehdä testejä tietokoneella.
 
 Karvinen 2018: [Control Windows with Salt](https://terokarvinen.com/2018/04/18/control-windows-with-salt/)
+- Tein pelkästään lokaalisti Windowsilla, mutta tämä artikkeli tiivistää hyvin mitä vaaditaan Windows koneen ohjaamiseen Saltilla.
+- Verrattuna Linuxiin paljon enemmän rajatumpaa, mutta onneksi Choco on myös olemassa
+- Ongelmakoodit myös paljon selvempiä Linuxissa kuin Windowsissa.
 ## a) Suolaikkuna. Asenna Salt Windowsiin. Jos ehdit jo asentaa, voit kirjoittaa muistinvaraisesti, mutta muista silloin merkitä, että tämä on muistista kirjoitettu. Näytä testillä (test.ping, file.managed tms), että Salt toimii.
 Tätä tehtävää varten käytän viime tunnilla asennettua Windowsia, sekä kurssin alussa tehtyä Debian virtuaalikonetta. Windowsin iso-tiedoston sain ladattua emuloimalla Chromen dev-tooleilla Safaria (F12->Network Conditions->User Agent->Safari) Microsoftin sivuilta, josta normaalisti ladataan asennustyökalu.
 
@@ -44,8 +48,12 @@ Tämän jälkeen ajoin komennot
 		
 Joka periaatteessa toimii apt-get updatena. Tämä saltin paketinhallintaohjelma hakee siis SaltStackin omasta [GitHubista](https://github.com/saltstack/salt-winrepo-ng) paketit, jotka voidaan asentaa, joten tein staten joka asentaa Notepad++:n ja puttyn, staten nimi oli essentials.
 Asennus toimi moitteetta.
+
 ![windowsessentials](https://raw.githubusercontent.com/Jimitesti/tehtava6/main/Kuvat/windowsessentials.png)
 ![windowsessentialsdone](https://raw.githubusercontent.com/Jimitesti/tehtava6/main/Kuvat/windowsessentialsdone.png)
+
 Käytin tätä tehtävää varten seuraavaa SaltProjectin [dokumentaatiota.](https://docs.saltproject.io/en/latest/topics/windows/windows-package-manager.html)
 
-## d) Goal. Tee projektisi palautussivu. Voit tehdä sen GitHubiin, kotisivullesi tai mihin vain haluat. Mistä teet miniprojektin? Kuvaile miniprojektin tarkoitus lauseella tai parilla. Asenna käsin (jokin alustava osa) projektistasi ja ota ruutukaappaus siitä, miten lopputulosta käytetään. Tietysti pääset tekemään paremman ruutukaappauksen, kun projektisi on valmis. Valitse projektille lisenssi (suosittelen GPL 2, voit valita lisenssin vapaasti). Laita sivulle nimesi (tai jos haluat, nimimerkki, mutta suosittelen nimeä). Ja lähdekoodiksi vaikkapa vain Saltin hei maailma. Kirjoita ohje, miten projektisi otetaan käyttöön. Kirjoita projektin kypsyys näkyviin, tässä vaiheessa se on varmaankin alpha, eli vasta aloitettu eikä vielä voi varsinaisesti edes kunnolla testata. Yritä tehdä sivu, jossa tärkeimmät asiat näkyvät taitoksen yllä (skrollaamatta): tarkoitus, ruutukaapaus, lisenssi, nimesi, latauslinkki, kypsyysaste (alpha). Tässä vaiheessa projektin ei vielä tarvitse toimia, vaan kaikkiin osiin tehdään vielä parannuksia. Voit kirjoittaa englanniksi tai suomeksi, suosittelen englantia.
+## Lähteet:
+Tero Karvinen 2018: https://terokarvinen.com/2018/04/18/control-windows-with-salt/
+SaltProject - Windows Package Manager:  https://docs.saltproject.io/en/latest/topics/windows/windows-package-manager.html
